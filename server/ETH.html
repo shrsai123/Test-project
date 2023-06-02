@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="parent">
+           <h1>HODLINFO</h1>
+           <div class="dropdown">
+           <button onclick="toggleDropdown()">INR</button>
+           <div id="myDropdown" class="dropdown-content">
+             <select>
+               <option value="option1">INR</option>
+            
+             </select>
+            </div>
+            </div>
+            <div class="dropdown">
+             <button onclick="toggleDropdown1()">BTC</button>
+             <div id="myDropdown1" class="dropdown-content">
+              <select>
+                 <option value="BTC.html">BTC</option>
+                 <option value="ETH.html">ETH</option>
+                 <option value="option3">USDT</option>
+                 <option value="option4">XRP</option>
+                 <option value="option5">TRX</option>
+                 <option value="option6">DASH</option>
+                 <option value="option7">ZEC</option>
+                 <option value="option8">XEM</option>
+                 <option value="option9">IOST</option>
+                 <option value="option10">WIN</option>
+                 <option value="option11">BTT</option>
+                 <option value="option12">WRX</option>
+               </select>
+             </div>
+            </div>
+            <div class="button-link"><a href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn" target="_blank"><button>Buy BTC</button></a></div>
+            <div class="clock-container">
+                <svg class="clock">
+                    <circle class="clock-circle" r="18" cx="20" cy="20"></circle>
+                    <text class="timer" x="20" y="25" text-anchor="middle">60</text>
+                </svg>
+                <div class="button-link">
+                <a href="https://hodlinfo.com/connect/telegram" target="_blank"> <img src="logo.png"></a>
+                </div>
+                    
+
+                    
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" onchange="toggleDarkMode()">
+                <span class="toggle-switch-slider"></span>
+            </label>
+                
+            </div>
+        </div>
+
+            
+            
+           
+                
+        
+</header>
+<div class="Trade">
+    <h2>Best Price to Trade</h2>
+</div>
+<div class="prices">
+  <span class="percentage"></span>
+  <span class="percentage"></span>
+
+  <div class="random-number" id="randomNumber"></div>
+  <span class="percentage1"></span>
+  <span class="percentage1"></span>
+</div>
+<div class="time">
+  <div class="mins">5 Mins</div>
+  <div class="hr">1 Hour</div>
+  <div class="net-price">Average ETH/INR net price including commission</div>
+  <div class="Day">1 Day</div>
+  <div class="Days">7 Days</div>
+</div>
+<table>
+  <thead>
+    <th >#</th>
+    <th>Platform</th>
+    <th>Last Traded Price</th>
+    <th>Buy / Sell Price</th>
+    <th>Difference</th>
+    <th>Savings</th>
+
+  </thead>
+  <tbody>
+    <tr class="row-red">
+      <td>1</td>
+      <td><div class="button-link"><a href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn" target="_blank">
+      <img src="wazirx.png"></a>WazirX</div></td>
+      <td class="Traded-price"></td>
+      <td class="buy-sell-price"></td>
+      <td class="difference"></td>
+      <td class="savings"></td>
+
+    </tr>
+    <tr class="row-blue">
+      <td >2</td>
+      <td><div class="button-link"><a href="https://bitbns.com/trade/?utm_source=refID_35_2023-06-02&utm_medium=referral_link&utm_campaign=referralip-172-31-29-104#/signup" target="_blank">
+        <img src="Bitbns.png" >
+      </a>Bitbns</div></td>
+      <td class="Traded-price"></td>
+      <td class="buy-sell-price"></td>
+      <td class="difference"></td>
+      <td class="savings"></td>
+
+    </tr>
+    <tr class="row-blue">
+      <td>3</td>
+      <td><div class="button-link"><a href="ETH.html" target="_blank">
+        <img src="Colodax.png" >
+      </a>Colodax</div></td>
+      <td class="Traded-price"></td>
+      <td class="buy-sell-price"></td>
+      <td class="difference"></td>
+      <td class="savings"></td>
+
+    </tr>
+    <tr class="row-red">
+      <td>4</td>
+      <td><div class="button-link"><a href="ETH.html" target="_blank">
+        <img src="Zebpay.png">
+      </a>Zebpay</div></td>
+      <td class="Traded-price"></td>
+      <td class="buy-sell-price"></td>
+      <td class="difference"></td>
+      <td class="savings"></td>
+
+    </tr>
+    <tr class="row-red">
+      <td>5</td>
+      <td><div class="button-link"><a href="ETH.html" target="_blank">
+        <img src="CoinDCX.png" >
+      </a>CoinDCX</div></td>
+      <td class="Traded-price"></td>
+      <td class="buy-sell-price"></td>
+      <td class="difference"></td>
+      <td class="savings"></td>
+
+    </tr>
+  </tbody>
+</table>
+<footer>
+  <div class="container">Copyright © 2019  HodlInfo.com</div>
+</footer>
+<script>
+  
+  
+    function toggleDropdown() {
+     document.getElementById("myDropdown").classList.toggle("show");;
+     
+}
+    
+    function toggleDropdown1() {
+      var dropdown = document.getElementById("myDropdown1").classList.toggle("show");
+
+}
+    var timerElement = document.querySelector('.timer');
+    var timerValue = 60;
+
+    timerElement.textContent = timerValue;
+
+setInterval(function() {
+  timerValue = -- timerValue<= 0 ? 60 : timerValue;
+  timerElement.textContent = timerValue;
+  
+}, 1000);
+
+    
+
+function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var randomNumberElement = document.getElementById("randomNumber");
+      randomNumberElement.classList.toggle("dark-mode");
+    }
+
+    
+    function generateRandomPercentage() {
+          var percentageElement = document.querySelectorAll('.percentage');
+           percentageElement.forEach(function(element) {
+            var randomDecimal = Math.random().toFixed(2);
+
+           
+            element.textContent = randomDecimal + '%';
+          });
+        }
+
+        generateRandomPercentage(); 
+        setInterval(generateRandomPercentage, 60000);
+
+     
+        
+        var randomNumber = Math.floor(Math.random() * 10000000); // Generates a random integer between 0 and 9999999
+        var formattedNumber = randomNumber.toLocaleString();
+        var randomNumberElement = document.getElementById("randomNumber");
+        randomNumberElement.textContent = '₹ '+formattedNumber;
+
+        function generateRandomPercentage1() {
+          var percentageElement = document.querySelectorAll('.percentage1');
+           percentageElement.forEach(function(element) {
+            var randomDecimal = (Math.random()*15).toFixed(2);
+
+           
+            element.textContent = randomDecimal + '%';
+          });
+        }
+
+        generateRandomPercentage1(); 
+        setInterval(generateRandomPercentage1, 60000);
+  
+      function generateRandomTradedprice(){
+        var priceelements=document.querySelectorAll('.Traded-price');
+        priceelements.forEach(function(element){
+          var price=Math.floor(Math.random() * 10000000); 
+          var formattedNumber = price.toLocaleString();
+          element.textContent='₹ '+formattedNumber;
+        });
+      }
+
+      function generateRandomBuySellprice(){
+        var priceelements=document.querySelectorAll('.buy-sell-price');
+        priceelements.forEach(function(element){
+          var buyprice=Math.floor(Math.random() * 10000000); 
+          var sellprice=Math.floor(Math.random() * 10000000); 
+          var formattedNumber = buyprice.toLocaleString();
+          var formattedNumber1 = sellprice.toLocaleString();
+          element.textContent='₹ '+formattedNumber+' / '+'₹ '+formattedNumber1;
+        });
+      }
+
+  function generateRandomDifference() {
+  var differenceElements = document.querySelectorAll('.difference');
+  differenceElements.forEach(function(element) {
+    var randomPercentage = (Math.random() * 10 - 5).toFixed(2);
+    element.textContent = randomPercentage + '%';
+  });
+}
+
+// Generate a random value for the "Savings" column
+function generateRandomSavings() {
+  var savingsElements = document.querySelectorAll('.savings');
+  var differenceElements = document.querySelectorAll('.difference');
+  savingsElements.forEach(function(element,index) {
+    var randomValue = Math.floor(Math.random() * 1000000);
+    var formattedNumber = randomValue.toLocaleString();
+    var randomDifference = parseFloat(differenceElements[index].textContent);
+    if(randomDifference <0){ // Generate a random value between 0 to 99,999
+    element.textContent = '▼ ₹ ' +formattedNumber ;
+    element.classList.add('red-text');
+    }
+    else{
+      element.textContent = '▲ ₹ ' +formattedNumber ;
+      element.classList.add('blue-text');
+    }
+  });
+}
+
+generateRandomTradedprice();
+generateRandomBuySellprice();
+generateRandomDifference();
+generateRandomSavings();
+setInterval(generateRandomTradedprice, 60000);
+setInterval(generateRandomBuySellprice, 60000);
+setInterval(generateRandomDifference, 60000);
+setInterval(generateRandomSavings, 60000);
+    
+
+
+    
+</script>
+</body>
+</html>

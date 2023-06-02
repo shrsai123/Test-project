@@ -1,0 +1,325 @@
+
+body{
+    background-color:white;
+    color: black ;
+}
+body.dark-mode {
+    background-color: black ;
+    color: white ;
+  }
+
+  button {
+    color: black ;
+    background-color: white ;
+  }
+  
+  .dark-mode button{
+    background-color: black ;
+    color: white ;
+  }
+
+
+  
+  
+  
+
+.parent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+.dropdown {
+    display: inline-block; 
+    position: relative;
+    
+    
+}
+
+
+
+.show {display: block;}
+
+.button-link{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color:black;
+    min-width: 30px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.button-link {
+    display:inline-block;
+  
+}
+
+
+h1 {
+    color:blue;
+    width: 30%;
+}
+
+.dropdown, .button-link {
+    width: 20%;
+}
+
+select {
+    width: 100%;
+}
+
+button {
+    width: 50%;
+}
+
+
+
+.clock-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+.clock {
+    width: 50px;
+    height: 50px;
+
+    
+}
+
+.clock-circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transform-origin: center;
+    animation: countdown 60s linear infinite forwards;
+}
+
+.timer {
+    font-size: 15px;
+    font-weight: bold;
+    fill: #007bff;
+
+    
+}
+
+
+
+
+@keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .toggle-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: .4s;
+    border-radius: 20px;
+  }
+
+  .toggle-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: blue;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .toggle-switch-slider {
+    background-color: gray;
+  }
+
+  input:checked + .toggle-switch-slider:before {
+    transform: translateX(26px);
+  }
+  
+  .Trade{
+    margin-bottom:10px;
+    margin-left:450px;
+    color:Gray 
+  }
+
+  
+
+  .percentage {
+    display:inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right:60px;
+    color:blue
+   
+    
+}
+
+.random-number{
+  display:inline-block;
+  font-size: 80px;
+  color:black;
+  background-color: white;
+  margin-right:45px;
+  
+}
+
+.random-number.dark-mode{
+  color:white;
+  background-color:black;
+}
+
+.percentage1{
+  display:inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right:10px;
+    color:blue;
+  
+}
+
+
+
+.mins{
+  font-size:20px;
+  display:inline-block;
+  color:grey;
+  margin-right:130px;
+  
+
+}
+
+.hr{
+  font-size:20px;
+  display:inline-block;
+  color:grey;
+  margin-right:110px;
+ 
+}
+
+.net-price{
+  font-size:17px;
+  display:inline-block;
+  color:grey;
+  transform: translateY(20px);
+  margin-right:45px;
+  
+}
+
+.Day{
+  font-size:20px;
+  display:inline-block;
+  color:grey;
+  margin-right:60px;
+}
+
+.Days{
+  font-size:20px;
+  display:inline-block;
+  color:grey;
+}
+
+.red-text{
+  color:red;
+
+}
+
+.blue-text{
+  color:blue;
+}
+
+.dark-mode .red-text{
+  color:red;
+
+}
+
+.dark-mode .blue-text{
+  color:blue;
+}
+
+.mins,
+.hr,
+.net-price,
+.Day,
+.Days {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+th {
+  vertical-align: middle;
+  font-size:25px;
+  color:grey;
+}
+
+td{
+ 
+  text-align: center;
+  font-size:25px;
+  color:black;
+  background-color:white;
+  border: 1px solid grey;  
+  padding: 5px  
+
+ 
+}
+
+
+
+body.dark-mode td {
+  color: white; /* Dark mode text color */
+  background-color: black; /* Dark mode background color */
+}
+
+
+.container {
+  position: relative;
+  color:grey
+}
+
+
